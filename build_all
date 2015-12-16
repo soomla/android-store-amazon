@@ -2,6 +2,7 @@
 set -e
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 cd $DIR
+./download_deps
 
 #ant -buildfile android-store-amazon.xml -Dlogging="true" -Dsoomla.filename="Soomla_debug" all
 #ant -buildfile android-store-amazon.xml -Dlogging="false" -Dsoomla.filename="Soomla_release" all
