@@ -23,3 +23,5 @@ local.properties
 proguard/
 
 .idea/workspace.xml
+
+libs/in-app-purchasing-2.0.1.jar
