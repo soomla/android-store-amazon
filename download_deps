@@ -3,12 +3,13 @@
 ANDROID_STORE_CACHE=~/.soomla/cache/android-store
 mkdir -p $ANDROID_STORE_CACHE
 
-if [ ! -f libs/in-app-purchasing-2.0.1.jar ];
+BILLING_JAR_NAME=in-app-purchasing-2.0.1.jar
+if [ ! -f libs/$BILLING_JAR_NAME ];
 then
-    if [ ! -f $ANDROID_STORE_CACHE/in-app-purchasing-2.0.1.jar ];
+    if [ ! -f $ANDROID_STORE_CACHE/$BILLING_JAR_NAME ];
     then
-        curl -L -o $ANDROID_STORE_CACHE/in-app-purchasing-2.0.1.jar.tmp http://library.soom.la/fetch/android-store-in-app-purchasing/2.0.1?cf=dl_deps
-        mv $ANDROID_STORE_CACHE/in-app-purchasing-2.0.1.jar.tmp $ANDROID_STORE_CACHE/in-app-purchasing-2.0.1.jar
+        curl -L -o $ANDROID_STORE_CACHE/$BILLING_JAR_NAME.tmp http://library.soom.la/fetch/android-store-in-app-purchasing/2.0.1?cf=dl_deps
+        mv $ANDROID_STORE_CACHE/$BILLING_JAR_NAME.tmp $ANDROID_STORE_CACHE/$BILLING_JAR_NAME
     fi
-    cp $ANDROID_STORE_CACHE/in-app-purchasing-2.0.1.jar libs/in-app-purchasing-2.0.1.jar
+    cp $ANDROID_STORE_CACHE/$BILLING_JAR_NAME libs/$BILLING_JAR_NAME
 fi
