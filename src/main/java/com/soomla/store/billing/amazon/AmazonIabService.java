@@ -125,11 +125,11 @@ public class AmazonIabService implements IIabService {
      * see parent
      */
     @Override
-    public void launchPurchaseFlow(String sku,
+    public void launchPurchaseFlow(String sku, String itemType,
                                    final IabCallbacks.OnPurchaseListener purchaseListener,
                                    String extraData) {
 
-        mAmazonIabHelper.launchPurchaseFlow(null, sku, new IabHelper.OnIabPurchaseFinishedListener() {
+        mAmazonIabHelper.launchPurchaseFlow(null, itemType, sku, new IabHelper.OnIabPurchaseFinishedListener() {
             @Override
             public void onIabPurchaseFinished(IabResult result, IabPurchase purchase) {
 
