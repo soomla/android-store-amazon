@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-store-amazon/android-store-amazon.iml" filepath="$PROJECT_DIR$/.idea/modules/android-store-amazon/android-store-amazon.iml" group="android-store-amazon" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-store-amazon/android-store-amazon_main.iml" filepath="$PROJECT_DIR$/.idea/modules/android-store-amazon/android-store-amazon_main.iml" group="android-store-amazon" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-store-amazon/android-store-amazon_test.iml" filepath="$PROJECT_DIR$/.idea/modules/android-store-amazon/android-store-amazon_test.iml" group="android-store-amazon" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/soomla-android-store-amazon.iml" filepath="$PROJECT_DIR$/.idea/modules/soomla-android-store-amazon.iml" />
+    </modules>
+  </component>
+</project>
