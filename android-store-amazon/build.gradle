@@ -1,0 +1,12 @@
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile files('libs/android-core.jar')
+    compile files('libs/android-store.jar')
+    compile files('libs/in-app-purchasing-2.0.61.jar')
+}
