@@ -124,8 +124,9 @@ public class AmazonIabService implements IIabService {
     /**
      * see parent
      */
+
     @Override
-    public void launchPurchaseFlow(String sku,
+    public void launchPurchaseFlow(String itemType, String sku,
                                    final IabCallbacks.OnPurchaseListener purchaseListener,
                                    String extraData) {
 
