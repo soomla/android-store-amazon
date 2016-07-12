@@ -1,3 +1,8 @@
+### v2.0.6 [view commit logs](https://github.com/soomla/android-store-amazon/compare/v2.0.5...v2.0.6)
+
+* Changes
+  * Removed binaries from repo
+
 ### v2.0.3 [view commit logs](https://github.com/soomla/android-store-amazon/compare/v2.0.2...v2.0.3)
 
 * Changes

@@ -45,7 +45,7 @@ import java.util.Map;
 
 /**
  * This is an implementation of SOOMLA's IabHelper to create a plugin of Amazon to SOOMLA.
- *
+ * <p>
  * More docs in parent.
  */
 public class AmazonIabHelper extends IabHelper {
@@ -67,7 +67,7 @@ public class AmazonIabHelper extends IabHelper {
      * see parent
      */
     @Override
-    protected void launchPurchaseFlowInner(Activity act, String sku, String extraData) {
+    protected void launchPurchaseFlowInner(Activity act, String itemType, String sku, String extraData) {
         mExtraData = extraData;
         PurchasingService.purchase(sku);
     }
@@ -85,7 +85,7 @@ public class AmazonIabHelper extends IabHelper {
      */
     @Override
     protected void fetchSkusDetailsAsyncInner(List<String> skus) {
-        if (skus == null || skus.isEmpty()){
+        if (skus == null || skus.isEmpty()) {
             SoomlaUtils.LogDebug(TAG, "skus is null or empty, nothing to fetch.");
             // Finish the fetch so it doesn't get stuck
             AmazonIabHelper.this.fetchSkusDetailsSuccess(new IabInventory());
@@ -168,8 +168,7 @@ public class AmazonIabHelper extends IabHelper {
                         purchaseSucceeded(purchase);
 
                         AmazonIabHelper.this.mExtraData = "";
-                    }
-                    catch (Exception e) {
+                    } catch (Exception e) {
                         // Make sure to fulfill the purchase if there's a crash
                         // so the items will not return in restoreTransactions
                         if (!fulfilled) {
@@ -209,7 +208,7 @@ public class AmazonIabHelper extends IabHelper {
             if (mCurrentUserData.getUserId() != null && !mCurrentUserData.getUserId().equals(purchaseUpdatesResponse.getUserData().getUserId())) {
                 SoomlaUtils.LogError(TAG, "The updates is not for the current user id.");
                 IabResult result = new IabResult(IabResult.BILLING_RESPONSE_RESULT_ERROR,
-                            "Couldn't complete restore purchases operation.");
+                        "Couldn't complete restore purchases operation.");
                 AmazonIabHelper.this.restorePurchasesFailed(result);
                 return;
             }
@@ -265,7 +264,7 @@ public class AmazonIabHelper extends IabHelper {
                         mInventory = null;
                     } else {
                         IabResult result = new IabResult(IabResult.BILLING_RESPONSE_RESULT_ERROR,
-                            "Couldn't complete restore purchases operation.");
+                                "Couldn't complete restore purchases operation.");
                         AmazonIabHelper.this.restorePurchasesFailed(result);
                     }
                     break;
@@ -273,14 +272,14 @@ public class AmazonIabHelper extends IabHelper {
         }
 
 
-        /** Private Members */
+        /**
+         * Private Members
+         */
 
         private static final String TAG = "SOOMLA AmazonIabHelper PurchasingObserver";
 
         private UserData mCurrentUserData = null;
         private IabInventory mInventory;
-
-
 
 
         @Override
@@ -298,7 +297,9 @@ public class AmazonIabHelper extends IabHelper {
     }
 
 
-    /** Private Members */
+    /**
+     * Private Members
+     */
 
     private static final String TAG = "SOOMLA AmazonIabHelper";
 

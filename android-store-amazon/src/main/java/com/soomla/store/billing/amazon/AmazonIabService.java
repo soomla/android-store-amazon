@@ -37,7 +37,7 @@ import java.util.Map;
  */
 public class AmazonIabService implements IIabService {
 
-    public static final String VERSION = "2.0.5";
+    public static final String VERSION = "2.0.6";
 
     /**
      * see parent
@@ -124,8 +124,9 @@ public class AmazonIabService implements IIabService {
     /**
      * see parent
      */
+
     @Override
-    public void launchPurchaseFlow(String sku,
+    public void launchPurchaseFlow(String itemType, String sku,
                                    final IabCallbacks.OnPurchaseListener purchaseListener,
                                    String extraData) {
 

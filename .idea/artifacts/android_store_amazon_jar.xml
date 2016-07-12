@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="android-store-amazon:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/android_store_amazon_jar</output-path>
+    <root id="archive" name="android-store-amazon.jar">
+      <element id="module-output" name="android-store-amazon_main" />
+    </root>
+  </artifact>
+</component>
